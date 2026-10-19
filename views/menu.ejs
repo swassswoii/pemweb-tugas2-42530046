@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<section class="intro">
+    <h2>Daftar Menu Lumpia</h2>
+    <p>Pilih lumpia favoritmu dari berbagai pilihan berikut.</p>
+</section>
+
+<form action="/menu" method="GET" class="filter-form">
+    <label for="kategori">Filter berdasarkan kategori:</label>
+
+    <select name="kategori" id="kategori">
+        <option value="">Semua Kategori</option>
+        <option value="goreng" <%= kategoriDipilih === 'goreng' ? 'selected' : '' %>>Lumpia Goreng</option>
+        <option value="basah" <%= kategoriDipilih === 'basah' ? 'selected' : '' %>>Lumpia Basah</option>
+    </select>
+
+    <button type="submit">Cari Menu</button>
+</form>
+
+<section class="menu-list">
+    <% if (daftarMenu.length > 0) { %>
+        <% daftarMenu.forEach(function(menu) { %>
+            <article class="menu-card">
+                <h3><%= menu.nama %></h3>
+                <p><strong>Kategori:</strong> <%= menu.kategori %></p>
+                <p><strong>Harga:</strong> Rp<%= menu.harga.toLocaleString('id-ID') %></p>
+                <p><%= menu.deskripsi %></p>
+                <a href="/menu/<%= menu.id %>">Lihat Detail</a>
+            </article>
+        <% }) %>
+    <% } else { %>
+        <p>Maaf, menu dengan kategori tersebut belum tersedia.</p>
+    <% } %>
+</section>
+
+<%- include('partials/footer') %>

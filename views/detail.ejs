@@ -1,0 +1,16 @@
+<%- include('partials/header') %>
+
+<section class="detail-card">
+    <h2><%= menu.nama %></h2>
+
+    <p><strong>Kategori:</strong> <%= menu.kategori %></p>
+
+    <p><strong>Harga:</strong> Rp<%= menu.harga.toLocaleString('id-ID') %></p>
+
+    <p><strong>Deskripsi:</strong></p>
+    <p><%= menu.deskripsi %></p>
+
+    <a href="/menu" class="back-link">Kembali ke Daftar Menu</a>
+</section>
+
+<%- include('partials/footer') %>
