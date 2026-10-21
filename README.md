@@ -35,7 +35,7 @@ Website ini tidak menggunakan database.
 
 ## Video Demonstrasi
 
-Tautan YouTube: Akan ditambahkan setelah video selesai diunggah.
+Tautan YouTube: [![Tonton Video Tugas Pemrograman Web - Kriuk Emas](https://youtube.com)](https://youtube.com)
 
 ## Identitas Proyek
 

@@ -4,8 +4,9 @@
   "description": "Website katalog lumpia Kriuk Emas menggunakan Express.js dan EJS",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
-  },
+  "start": "node app.js",
+  "dev": "node --watch app.js"
+},
   "keywords": [
     "express",
     "ejs",
